@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KECC 서비스 소개</title>
-  <style>
+ <style>
     body {
       margin: 0;
       padding: 0;
@@ -16,6 +16,59 @@
       min-height: 100vh;
     }
     .hero-banner {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-banner h1 {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInTop 1s ease-in forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-banner h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: black;
+  margin: 10px 0;
+}
+
+.hero-banner p {
+  font-size: 18px;
+  color: black;
+  margin: 0;
+  opacity: 0;
+  animation: fadeInBottom 1s ease-in forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-banner {
       background: #ffcc00;
       width: 100%;
       padding: 60px 20px;
@@ -127,30 +180,72 @@
     .hero-banner {
       background-color: #ffcc00;
       text-align: center;
-      padding: 40px;
+      padding: 60px 20px;
     }
+    
     .hero-banner h1 {
-      font-size: 2em;
+      font-size: 1.2em;
+      font-weight: 300;
       color: black;
       margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeInTop 0.7s ease-in forwards;
+      animation-delay: 0.5s;
     }
+    
     .hero-banner h2 {
       font-size: 2.5em;
       font-weight: bold;
       color: black;
+      margin: 10px 0;
+      /* KECC는 즉시 나타남 */
     }
+    
+    .hero-banner p {
+      font-size: 18px;
+      color: black;
+      margin: 0;
+      opacity: 0;
+      animation: fadeInBottom 2s ease-in forwards;
+      animation-delay: 1.2s;
+    }
+    
+    /* 애니메이션 정의 */
+    @keyframes fadeInTop {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInBottom {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     </style>
     <div class="hero-banner">
-      <h1>(주)한국방폭인증센터</h1>
+      <h1 class="fade-slow-top">(주)한국방폭인증센터</h1>
       <h2>KECC</h2>
-    </div>
-        <p>Korea Explosion-proof Certification Center</p>
+      <p class="fade-slow-bottom">Korea Explosion-proof Certification Center</p>
+
     <div class="button-group">
       <a href="http://www.iecex.co.kr/company/info.php" target="_blank">회사소개</a>
       <a href="http://www.iecex.co.kr/customer/qna.php" target="_blank">게시판 문의</a>
       <a href="https://pf.kakao.com/_xexjVwn/chat" target="_blank">카카오톡</a>
     </div>
   </div>
+
   <div class="title-area">
     <h1>안전 컨설팅 주요 서비스</h1>
     <p>방폭인증 · PSM · 유해위험방지계획서 · 화학사고예방관리계획서 · 설치검사 등</p>
@@ -169,8 +264,7 @@
         영업허가
       </div>
     </div>
-
-    <div class="card">
+        <div class="card">
       <div class="icon">
         <img src="안전모.png" alt="안전모">
       </div>
